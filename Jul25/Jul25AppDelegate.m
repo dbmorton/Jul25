@@ -16,17 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	/*
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
-	 */
-	
 	self.window = [[UIWindow alloc] initWithFrame: [UIScreen mainScreen].bounds];
-	
-	
+		
 	//*** START OF GETTING BAND DATA ***
 	//Initialize Array for all band data sets
 	_bandDataSets=[[NSMutableArray alloc] init];
@@ -66,18 +57,10 @@
 			
 			[_bandDataSets addObject:dataSet];
 			
-			//No longer should be here***
-			//BandView *bandView=[[BandView alloc] initWithFrame: self.bounds];
-			//bandView.bandData=dataSet;
-			//[_bandViews addObject:bandView];
 		}
 		
 	}
 	//*** END OF GETTING BAND DATA ***
-	
-	//NSLog(@"%i bands found",[_bandViews count]);
-	
-
 	
 	// Override point for customization after application launch.
 	UITabBarController *tabBarController = [[UITabBarController alloc] init];
@@ -100,49 +83,7 @@
 	
 	tabBarController.viewControllers= [NSArray arrayWithArray:theViewControllers];
 	
-	
-		/*
-	tabBarController.viewControllers = [NSArray arrayWithObjects:
-										
-										[[ViewController alloc]
-										 initWithText: @"The Bronx is up and the Battery’s down!"	//apostophe, not prime
-										 title: @"The Bronx"
-										 image: [UIImage imageNamed: @"bronx.png"]
-										 badge: nil
-										 ],
-										
-										[[ViewController alloc]
-										 initWithText: @"How sweet it is!"
-										 title: @"Brooklyn"
-										 image: [UIImage imageNamed: @"brooklyn.png"]
-										 badge: nil
-										 ],
-										
-										[[ViewController alloc]
-										 initWithText: @"People ride in a hole in the ground!"
-										 title: @"Manhattan"
-										 image: [UIImage imageNamed: @"manhattan.png"]
-										 badge: @"4,5,6"
-										 ],
-										
-										[[ViewController alloc]
-										 initWithText: @"Bob Moses was a genius!"
-										 title: @"Queens"
-										 image: [UIImage imageNamed: @"queens.png"]
-										 badge: @"E"
-										 ],
-										
-										[[ViewController alloc]
-										 initWithText: @"Is dat an Island?"
-										 title: @"Staten Island"
-										 image: [UIImage imageNamed: @"statenisland.png"]
-										 badge: nil
-										 ],
-										
-										nil
-										];
-		 */
-	
+		
 	tabBarController.selectedIndex = 0;	//0 (the leftmost one) is the default
 	self.window.rootViewController = tabBarController;
 	[self.window makeKeyAndVisible];

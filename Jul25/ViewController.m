@@ -48,9 +48,6 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-#pragma mark - View lifecycle
-
-
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void) loadView
 {
@@ -64,7 +61,6 @@
 {
 	[super viewDidLoad];
 }
-
 
 - (void) viewDidUnload
 {
